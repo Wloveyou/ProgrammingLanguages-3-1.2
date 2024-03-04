@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Generators", "Generators\Ge
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Task", "Task\Task.vcxproj", "{18DCF7F5-8E45-4FC7-BE4E-5BEF110590EF}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Tests", "Tests\Tests.vcxproj", "{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{18DCF7F5-8E45-4FC7-BE4E-5BEF110590EF}.Release|x64.Build.0 = Release|x64
 		{18DCF7F5-8E45-4FC7-BE4E-5BEF110590EF}.Release|x86.ActiveCfg = Release|Win32
 		{18DCF7F5-8E45-4FC7-BE4E-5BEF110590EF}.Release|x86.Build.0 = Release|Win32
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Debug|x64.ActiveCfg = Debug|x64
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Debug|x64.Build.0 = Debug|x64
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Debug|x86.ActiveCfg = Debug|Win32
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Debug|x86.Build.0 = Debug|Win32
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Release|x64.ActiveCfg = Release|x64
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Release|x64.Build.0 = Release|x64
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Release|x86.ActiveCfg = Release|Win32
+		{405EA5E5-B0CF-4A11-8F1B-4EA7A88095EC}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -127,11 +127,19 @@ void miit::Matrix::transpose()
 
 std::vector<int>& miit::Matrix::operator[](size_t index)
 {
+	if (index >= this->rows_counts()) 
+	{
+		throw std::out_of_range("Incorrect index");
+	}
 	return data[index];
 }
 
 const std::vector<int>& miit::Matrix::operator[](size_t index) const
 {
+	if (index >= this->rows_counts())
+	{
+		throw std::out_of_range("Incorrect index");
+	}
 	return data[index];
 }
 

@@ -134,6 +134,9 @@
     <ProjectReference Include="..\MatrixTask\MatrixTask.vcxproj">
       <Project>{3ea70e04-04be-4038-b65e-58274b31674f}</Project>
     </ProjectReference>
+    <ProjectReference Include="..\Task\Task.vcxproj">
+      <Project>{18dcf7f5-8e45-4fc7-be4e-5bef110590ef}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
