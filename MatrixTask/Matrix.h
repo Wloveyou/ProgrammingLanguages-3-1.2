@@ -18,15 +18,13 @@ namespace miit
 		* @param user_columns Количество столбцов в матрице
 		* @param generator Генератор, которым необходимо заполнить матрицу
 		*/
-		Matrix(size_t user_rows, size_t user_columns, Generator* generator);
+		Matrix(int user_rows, int user_columns, Generator* generator);
 
 		/**
 		* @brief Инициализирует объект тип матрица по параметрам пользователя
-		* @param user_rows Количество строк в матрице
-		* @param user_columns Количество столбцов в матрице
-		* @param data Информация о значениях матрицы
+		* @param user_data Информация о значениях матрицы в виде двумерного массива
 		*/
-		Matrix(size_t user_rows, size_t user_columns, std::initializer_list<int> data);
+		Matrix(std::initializer_list<std::initializer_list<int>> user_data);
 
 		/**
 		* @brief Инициализирует пустой объект тип матрица

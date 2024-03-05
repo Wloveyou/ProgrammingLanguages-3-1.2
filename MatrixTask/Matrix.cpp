@@ -3,9 +3,13 @@
 #include <sstream>
 
 
-miit::Matrix::Matrix(size_t user_rows, size_t user_columns, Generator* generator)
+miit::Matrix::Matrix(int user_rows, int user_columns, Generator* generator)
 	:data({})
 {
+	if (user_rows < 0 || user_columns < 0) 
+	{
+		throw std::out_of_range("Incorrect matrix size");
+	}
 	for (size_t i = 0; i < user_rows; i++)
 	{
 		std::vector<int> temp{};
@@ -17,21 +21,23 @@ miit::Matrix::Matrix(size_t user_rows, size_t user_columns, Generator* generator
 	}
 }
 
-miit::Matrix::Matrix(size_t user_rows, size_t user_columns, std::initializer_list<int> data)
-	:data(std::vector<std::vector<int>> {user_rows})
+miit::Matrix::Matrix(std::initializer_list<std::initializer_list<int>> user_data)
+	:data({})
 {
-	size_t i = 0;
-	size_t j = 0;
-	for (auto& item : data)
+	int constant_column_size = user_data.begin()->size();
+	for (auto& row : user_data)
 	{
-		this->data[j].push_back(item);
-		i++;
-		if (i % user_columns == 0)
+		if (row.size() != constant_column_size) 
 		{
-			j++;
+			throw std::out_of_range("Not Matrix");
 		}
+		std::vector<int> temp{};
+		for (auto& column : row)
+		{
+			temp.push_back(column);
+		}
+		this->data.push_back(temp);
 	}
-
 }
 
 miit::Matrix::Matrix()
@@ -41,7 +47,7 @@ miit::Matrix::Matrix()
 
 void miit::Matrix::add_row(std::vector<int> user_data, size_t index)
 {
-	if (index < 0 || index > this->rows_counts())
+	if (index >= this->rows_counts())
 	{
 		throw std::out_of_range("incorrect index");
 	}
