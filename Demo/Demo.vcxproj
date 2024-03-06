@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3ea70e04-04be-4038-b65e-58274b31674f}</ProjectGuid>
-    <RootNamespace>MatrixTask</RootNamespace>
+    <ProjectGuid>{7913c98c-d6f7-4fd7-b409-bb3f18b712eb}</ProjectGuid>
+    <RootNamespace>Demo</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -40,7 +40,7 @@
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
@@ -128,15 +128,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Generators\Generators.vcxproj">
-      <Project>{d266eec8-cc84-4f39-a11e-0ba53bc7c5c3}</Project>
+    <ClCompile Include="Source.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MatrixTask\MatrixTask.vcxproj">
+      <Project>{3ea70e04-04be-4038-b65e-58274b31674f}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Matrix.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Matrix.cpp" />
+    <ProjectReference Include="..\Task\Task.vcxproj">
+      <Project>{18dcf7f5-8e45-4fc7-be4e-5bef110590ef}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

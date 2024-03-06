@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{3ea70e04-04be-4038-b65e-58274b31674f}</ProjectGuid>
-    <RootNamespace>MatrixTask</RootNamespace>
+    <ProjectGuid>{18dcf7f5-8e45-4fc7-be4e-5bef110590ef}</ProjectGuid>
+    <RootNamespace>Task</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -128,15 +128,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Generators\Generators.vcxproj">
-      <Project>{d266eec8-cc84-4f39-a11e-0ba53bc7c5c3}</Project>
+    <ClInclude Include="Task.h" />
+    <ClInclude Include="TaskBase.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Task.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MatrixTask\MatrixTask.vcxproj">
+      <Project>{3ea70e04-04be-4038-b65e-58274b31674f}</Project>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="Matrix.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Matrix.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
